@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
+import UserContext from '../Context/UserContext'
 
 function ThemeBtn() {
-  const [isChecked, setIsChecked] = useState(false);
+    const {isChecked,setIsChecked} = useContext(UserContext)
 
   const onChangeBtn = (e) => {
     const darkModeStatus = e.currentTarget.checked;
     setIsChecked(darkModeStatus); // Update state
   };
 
-  useEffect(() => {
-    document.querySelector('html').classList.remove("dark", "light")
-    document.querySelector('html').classList.add(isChecked ? "dark" : "light");
-
-  }, [isChecked]);
+ 
 
   return (
     <label className="relative inline-flex items-center cursor-pointer">

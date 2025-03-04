@@ -1,6 +1,13 @@
-import React from 'react'
 
+import React, { useEffect, useContext } from "react";
+import UserContext from '../Context/UserContext'
 export default function Card() {
+    const {isChecked} = useContext(UserContext)
+    useEffect(() => {
+        document.querySelector('html').classList.remove("dark", "light")
+     
+    
+      }, [isChecked]);
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/">

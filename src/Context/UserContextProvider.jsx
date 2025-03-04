@@ -3,9 +3,9 @@ import React, {useState} from 'react'
 import UserContext from './UserContext'
 
 const UserContextProvider= ({children}) => {
-    const [mode, setmode] = useState(null)
+    const [isChecked, setIsChecked] = useState(null)
     return (
-        <UserContext.Provider value={{mode, setmode}}>
+        <UserContext.Provider value={{isChecked, setIsChecked}}>
             {children}
         </UserContext.Provider>
     )

@@ -1,12 +1,13 @@
-import { useState } from 'react'
+
 import './App.css'
 import Card from './components/Card'
 import ThemeBtn from './components/ThemeBtn'
-import { useEffect } from 'react'
+
 import UserContextProvider from './Context/UserContextProvider'
 
 function App() {
-  
+
+
 
   return (
     <UserContextProvider>
